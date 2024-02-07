@@ -1,0 +1,7 @@
+.features {
+    position: relative;
+    max-width: 1600px;
+    height: 200px;
+    margin: 10px auto;
+    display: flex;
+}

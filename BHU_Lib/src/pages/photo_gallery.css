@@ -1,0 +1,117 @@
+.photo_heading p{
+    max-width:100%;
+    margin:10px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.photo_division {
+    width:100%;
+    background-color: antiquewhite;
+    padding: 0px 20px;
+}
+.photo_division_innerbox{
+    max-width: 800px;
+    margin: 0px auto;
+    display: flex;
+}
+.photo_division_innerbox Button {
+    width: 20%;
+    font-size: 18px;
+    margin: 0px 4px;
+    padding: 4px 4px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 8px 10px;
+}
+
+.photo_box {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+    object-fit: cover;
+    margin-bottom: 10px;
+    background-color: black;
+}
+.gallery .photo_box img {
+    background-color: black;
+}
+.photo_box img:hover {
+    opacity: 0.7;
+    -webkit-transition: all 350ms ease;
+    transition: all 200ms ease-in-out;
+}
+
+@media (max-width: 920px) {
+    .gallery{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+.model {
+    width: 100%;
+    height: 100% ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 999;
+}
+.model.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.model img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+}
+
+.model.open svg {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    color: #ffffff; 
+    cursor: pointer;
+}

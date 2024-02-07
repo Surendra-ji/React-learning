@@ -1,0 +1,12 @@
+export { default as Article } from './article/ContactUs';
+export { default as Notices } from './feature/Notices';
+export { default as UsefulComponent } from './feature/UsefulComponent';
+export { default as ELinks } from './feature/ELinks';
+export { default as Navbar } from './navbar/Navbar';
+export { default as BtnSlider } from './slideproperties/BtnSlider';
+export { default as DataSlider } from './slideproperties/DataSlider';
+export { default as  FooterImage} from './imagesec/FooterImage';
+export { default as ContactUs } from './article/ContactUs';
+export { default as UsefulLinks } from './article/UsefulLinks';
+export { default as FollowUs } from './article/FollowUs';
+export { default as ForVisitors } from './article/ForVisitors';

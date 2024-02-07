@@ -1,0 +1,13 @@
+.btnContainer {
+    padding: 10px;
+    background-color: beige;
+}
+
+.btn {
+    margin: 10px;
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    color: white;
+    background: #2a2e2a;
+}

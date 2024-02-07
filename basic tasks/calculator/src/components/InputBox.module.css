@@ -1,0 +1,15 @@
+.inputBox {
+    width: 25.6rem;
+    height: 4rem;
+    text-align: end;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.inputBox::-webkit-inner-spin-button, 
+.inputBox::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

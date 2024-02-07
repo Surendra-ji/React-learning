@@ -1,0 +1,37 @@
+.history_container {
+    max-width: 1600px;
+    padding: 10px 10px;
+    margin: 10px auto;
+}
+
+.history_container span {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 4px 0px;
+}
+.history_slide {
+    width: 100%;
+    display: flex;
+}
+.history_pics {
+    width: 45%;
+    margin: auto;
+}
+.history_pics img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.history_content {
+    width: 45%;
+    margin: 10px;
+}
+.history_content p{
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 3px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 4px;
+}

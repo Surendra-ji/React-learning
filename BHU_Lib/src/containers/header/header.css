@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 5px;
+
+}
+.header__logo img {
+    display: flex;
+    margin: 0 auto 0;
+    max-width: 55%;
+    height: auto;
+    object-fit: cover;
+}
+.header__bhu-logo{
+    flex: 50%;
+    object-fit: cover;
+    justify-content: center;
+}
+.header__hindi-logo{ 
+    flex: 50%;
+    object-fit: cover;
+}

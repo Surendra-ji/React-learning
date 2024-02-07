@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    max-width: 1600px;
+    margin: 2px auto;
+    justify-content: space-between;
+    padding: 0px 4px;
+    line-height: 2rem;
+
+   /* ff 3.6+ */
+    background:-moz-radial-gradient(ellipse at 50% 50%, rgba(3, 42, 127, 1) 80%, rgba(1, 32, 123, 1) 90%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(ellipse at 50% 50%, rgba(3, 42, 127, 1) 80%, rgba(1, 32, 123, 1) 90%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(ellipse at 50% 50%, rgba(3, 42, 127, 1) 80%, rgba(1, 32, 123, 1) 90%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(ellipse at 50% 50%, rgba(3, 42, 127, 1) 80%, rgba(1, 32, 123, 1) 90%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(ellipse at 50% 50%, rgba(3, 42, 127, 1) 80%, rgba(1, 32, 123, 1) 90%);
+
+}
+
+.footer_image{
+    width: 25%;
+    display: contain;
+    margin: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.footer_text {
+    width: 75%;
+    color: white;
+    margin: 2px 4px;
+    display: flex;
+    justify-content: space-between;
+}

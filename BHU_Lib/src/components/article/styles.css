@@ -1,0 +1,16 @@
+
+.text {
+    font-size: 14px;
+}
+
+.text p:hover {
+    opacity: .6;
+}
+.footer_heading p:hover {
+    opacity: 1;
+}
+.footer_heading {
+    font-size: 20px;
+    font-weight: 600;
+    color:  black;
+}
