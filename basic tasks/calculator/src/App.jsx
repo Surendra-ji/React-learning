@@ -1,14 +1,28 @@
 import './App.css'
-import InputBox from './components/InputBox'
+import Display from './components/Display'
 import Buttons from './components/Buttons'
+import { useState } from 'react'
 function App() {
-
-  return ( 
+  let [disVal, setdisVal] = useState("");
+  const onButtonClick = (e,btn) => {
+    // console.log(e.target.innerText+", btn= "+ btn);
+    if(btn === 'C') {
+      setdisVal("");
+    }
+    else if (btn === '=') {
+      const result = eval(disVal);
+      setdisVal(result);
+    } else {
+        const newDisVal = disVal + btn;
+        setdisVal(newDisVal);
+    }
+  }
+  return (
     <>
       <center>
         <div className='main-container'>
-          <InputBox/>
-          <Buttons/>
+          <Display disVal={disVal} />
+          <Buttons onButtonClick={onButtonClick} />
         </div>
       </center>
     </>
