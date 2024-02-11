@@ -21,7 +21,7 @@ function App() {
     //   { workName: workName, workDate: workDate }
     // ];
     // insted of using useState setValue(); use like below it will reduse errors in big projects 
-    // in below currVal is your todoItems
+    // in below currVal is your current value to todoItems it called functional update
     settodoItems((currVal) => {
       [
         ...currVal,
