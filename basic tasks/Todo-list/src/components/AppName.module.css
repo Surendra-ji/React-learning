@@ -1,13 +1,13 @@
 h1 {
-    font-size: 45px;
-    font-weight: 700;
+    
+    /* font-weight: 700; */
     margin: 10px;
     margin-bottom: 20px;
   }
 
 .nameHeading {
   background-color: cadetblue;
-  /* size: 50px; */
-  height: 70px;
+  font-size: 4rem;
+  height: 80px;
   text-align: center;
 }

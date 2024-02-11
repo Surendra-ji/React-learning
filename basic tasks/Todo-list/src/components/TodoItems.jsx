@@ -1,8 +1,8 @@
 import Item from "./Item";
 
-function TodoItems({todo}) {
+function TodoItems({todoItems, handleDelet}) {
     return <>
-      {todo.map(item => <Item key={item} workName={item.workName} workDate={item.workDate}/>)}
+      {todoItems.map(item => <Item key={item.workName} handleDelet= {handleDelet} workName={item.workName} workDate={item.workDate}/>)}
     </>
 
 }

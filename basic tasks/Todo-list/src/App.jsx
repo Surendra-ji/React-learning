@@ -1,26 +1,39 @@
 import AppName from "./components/AppName";
 import TodoItems from "./components/TodoItems";
 import AddTodo from "./components/AddTodo";
+import WelcomeMsg from "./components/WelcomeMsg";
 import "./App.css";
+import { useState } from "react";
+
 function App() {
-  let todo = [{
+  let initTodo  = [{
     workName: 'aaaaa',
     workDate: '10/10/2024'
   }, {
     workName: 'bbbbbb',
     workDate: '14/10/2024'
-  }, {
-    workName: 'aaaccccaa',
-    workDate: '12/11/2024'
-  }, {
-    workName: 'dddddd',
-    workDate: '16/12/2024'
   }];
+
+  const [todoItems, settodoItems] = useState(initTodo);
+  const handleAddTodo = (workName, workDate) => {
+    const newtodoItem = [
+      ...todoItems,
+      { workName: workName, workDate: workDate }
+    ];
+    settodoItems(newtodoItem);
+  }
+
+  const handleDelet = (wName) => {
+    const updatedTodo = todoItems.filter(todo => todo.workName !== wName);
+    // console.log(updatedTodo);
+    settodoItems(updatedTodo);
+  };
   return <center className='todo-container'>
     <AppName></AppName>
     <div className="item-container">
-      <AddTodo></AddTodo>
-      <TodoItems todo={todo} />
+      <AddTodo handleAddTodo = {handleAddTodo}></AddTodo>
+      {todoItems.length === 0 && <WelcomeMsg></WelcomeMsg>}
+      <TodoItems todoItems = {todoItems} handleDelet = {handleDelet}/>
     </div>
   </center>
 }
