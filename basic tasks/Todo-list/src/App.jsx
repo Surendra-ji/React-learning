@@ -16,11 +16,18 @@ function App() {
 
   const [todoItems, settodoItems] = useState(initTodo);
   const handleAddTodo = (workName, workDate) => {
-    const newtodoItem = [
-      ...todoItems,
-      { workName: workName, workDate: workDate }
-    ];
-    settodoItems(newtodoItem);
+    // const newtodoItem = [
+    //   ...todoItems,
+    //   { workName: workName, workDate: workDate }
+    // ];
+    // insted of using useState setValue(); use like below it will reduse errors in big projects 
+    // in below currVal is your todoItems
+    settodoItems((currVal) => {
+      [
+        ...currVal,
+        { workName: workName, workDate: workDate }
+      ]
+    });
   }
 
   const handleDelet = (wName) => {
