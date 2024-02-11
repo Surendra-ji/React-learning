@@ -1,8 +1,10 @@
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { MdOutlinePlaylistAdd } from "react-icons/md";
 import styles from './Item.module.css';
+import { TodoListContext } from '../store/todo-list-context';
 
-function AddTodo({handleAddTodo}) {
+function AddTodo() {
+  const {handleAddTodo} = useContext(TodoListContext);
   const todoNameElement = useRef();
   const todoDateElement = useRef();
   // const [todoName, settodoName] = useState();

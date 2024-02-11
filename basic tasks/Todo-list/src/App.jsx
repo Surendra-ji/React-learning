@@ -4,6 +4,7 @@ import AddTodo from "./components/AddTodo";
 import WelcomeMsg from "./components/WelcomeMsg";
 import "./App.css";
 import { useState } from "react";
+import { TodoListContext } from "./store/todo-list-context";
 
 function App() {
   let initTodo  = [{
@@ -16,33 +17,36 @@ function App() {
 
   const [todoItems, settodoItems] = useState(initTodo);
   const handleAddTodo = (workName, workDate) => {
-    // const newtodoItem = [
-    //   ...todoItems,
-    //   { workName: workName, workDate: workDate }
-    // ];
+    const newtodoItem = [
+      ...todoItems,
+      { workName: workName, workDate: workDate }
+    ];
     // insted of using useState setValue(); use like below it will reduse errors in big projects 
     // in below currVal is your current value to todoItems it called functional update
-    settodoItems((currVal) => {
-      [
-        ...currVal,
-        { workName: workName, workDate: workDate }
-      ]
-    });
+    settodoItems(newtodoItem);
   }
 
-  const handleDelet = (wName) => {
+  const handleDelete = (wName) => {
     const updatedTodo = todoItems.filter(todo => todo.workName !== wName);
     // console.log(updatedTodo);
     settodoItems(updatedTodo);
   };
-  return <center className='todo-container'>
-    <AppName></AppName>
-    <div className="item-container">
-      <AddTodo handleAddTodo = {handleAddTodo}></AddTodo>
-      {todoItems.length === 0 && <WelcomeMsg></WelcomeMsg>}
-      <TodoItems todoItems = {todoItems} handleDelet = {handleDelet}/>
-    </div>
-  </center>
+  return <TodoListContext.Provider value={
+    {
+      todoItems,
+      handleAddTodo,
+      handleDelete
+    }
+  }>
+    <center className='todo-container'>
+      <AppName></AppName>
+      <div className="item-container">
+        <AddTodo />
+        <WelcomeMsg />
+        <TodoItems />
+      </div>
+    </center>
+  </TodoListContext.Provider>
 }
 
 export default App
