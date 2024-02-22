@@ -1,7 +1,7 @@
 import './App.css'
 import ClockName from './components/ClockName';
-import ClockQuote from './components/ClockQuote';;
-import ClockDateTime from './components/ClockDateTime';;
+import ClockQuote from './components/ClockQuote';
+import ClockDateTime from './components/ClockDateTime';
 
 function App() {
   return (

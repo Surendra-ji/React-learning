@@ -1,8 +1,21 @@
-function ClockDateTime() {
+import { useEffect, useState } from "react";
 
-    let current_time = new Date();
+function ClockDateTime() {
+    const [time, settime] = useState(new Date());
+    // console.log("current time period");
+    useEffect(
+        () => {
+        const intervalId = setInterval(() => {
+            settime(new Date());
+        }, 1000);
+
+            return () => {
+                clearInterval(intervalId);
+                // console.log("cancelled the interval");
+            }
+        }, [] );
     return <>
-        <p>This is current date: {current_time.toLocaleDateString()} and time: {current_time.toLocaleTimeString()}</p>
+        <p>This is current date: {time.toLocaleDateString()} and time: {time.toLocaleTimeString()}</p>
     </>
 }
 
